@@ -3,12 +3,11 @@ import ArticleCard from '../ArticleCard/ArticleCard'
 import '../../styles/CardsContainer.css'
 
 const CardsContainer = ({ articles }) => {
-  //map out ArticleCards
-  //render in the return statement
+  
 
   const cards = articles.map((article, index) => {
     return (
-      <ArticleCard details={article} key={index} />
+        <ArticleCard details={article} key={index} />
     )
   })
 

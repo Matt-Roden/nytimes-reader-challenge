@@ -1,9 +1,13 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
-const ArticleDetails = () => {
+const ArticleDetails = ({ details }) => {
+
   return (
     <div>
-      Details Here!
+      <Link to='/'>
+        <button>Home</button>
+      </Link>
+      <h1>{details.title}</h1>
     </div>
   )
 }

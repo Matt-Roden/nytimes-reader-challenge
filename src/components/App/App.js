@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <h1>NYTimes Reader</h1>
-      <CardsContainer />
+      <CardsContainer articles={articles}/>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import '../../styles/App.css';
 import { getHomeArticles, getArticlesByTopic } from '../../utils'
+import CardsContainer from '../CardsContainer/CardsContainer';
 
 function App() {
   const [articles, setArticles] = useState([])
@@ -18,7 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      NYTimes Reader
+      <h1>NYTimes Reader</h1>
+      <CardsContainer articles={articles}/>
     </div>
   );
 }

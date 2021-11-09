@@ -4,8 +4,13 @@ import '../../styles/ArticleCard.css'
 const ArticleCard = ({ details, key }) => {
   return (
     <article className='articleCard--container'>
-      <div className='textWrapper--container'></div>
-      <div className='pictureWrapper--container'></div>
+      <div className='textWrapper--container'>
+        <h3 className='title--text'>{details.title}</h3>
+        <p className='abstract--text'>{details.abstract}</p>
+      </div>
+      <div className='pictureWrapper--container'>
+        <img src={details.multimedia[3].url}/>
+      </div>
     </article>
   )
 }

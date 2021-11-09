@@ -1,10 +1,12 @@
 import React from 'react'
+import '../../styles/ArticleCard.css'
 
-const ArticleCard = () => {
+const ArticleCard = ({ details, key }) => {
   return (
-    <div>
-      "Card Here"
-    </div>
+    <article className='articleCard--container'>
+      <div className='textWrapper--container'></div>
+      <div className='pictureWrapper--container'></div>
+    </article>
   )
 }
 

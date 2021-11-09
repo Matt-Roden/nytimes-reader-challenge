@@ -1,5 +1,6 @@
 import React from 'react'
 import ArticleCard from '../ArticleCard/ArticleCard'
+import '../../styles/CardsContainer.css'
 
 const CardsContainer = ({ articles }) => {
   //map out ArticleCards

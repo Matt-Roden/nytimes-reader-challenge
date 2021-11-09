@@ -18,4 +18,7 @@
   border: solid blue 2px;
   height: 100%;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+
 }

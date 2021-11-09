@@ -35,7 +35,7 @@ function App() {
             const story = articles.find(
               article => article.id === match.params.id
             );
-            return <ArticleDetails details={story} />
+            return <ArticleDetails details={story} articles={articles}/>
           }}
         />
 

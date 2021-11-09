@@ -25,7 +25,6 @@ const ArticleDetails = ({ details, articles }) => {
           <h1>{articleDetails.title}</h1>
         </div>
       )}
-      
     </>
   )
 }

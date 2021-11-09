@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import { Routes, Route} from "react-router-dom";
 import '../../styles/App.css';
-import { getHomeArticles, getArticlesByTopic } from '../../utils'
+import { getHomeArticles, getArticlesByTopic, addId } from '../../utils'
 import CardsContainer from '../CardsContainer/CardsContainer';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   // this will be for for rendering a new page with an ID attached to the end of the URL
 
   useEffect(() => {
-    getHomeArticles().then(data => setArticles(data.results))
+    getHomeArticles().then(data => setArticles(addId(data.results)))
     // getArticlesByTopic('books').then(data => console.log("Book Articles: ", data.results))
   }, [])
 

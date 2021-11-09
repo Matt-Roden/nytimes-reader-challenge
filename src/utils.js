@@ -15,6 +15,6 @@ export const getArticlesByTopic = (topic) => {
     .catch(err => console.log("Error: ", err))
 }
 
-// export const addId = (data) => {
-//   return data.map(story => ({ ...story, id: }))
-// }
+export const addId = (data) => {
+  return data.map(story => ({ ...story, id: uuidv4() }))
+}

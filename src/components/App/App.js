@@ -5,8 +5,10 @@ import { getHomeArticles } from '../../utils'
 
 function App() {
 
+  const [articles, setArticles] = useState([])
+
   useEffect(() => {
-    getHomeArticles().then(data => console.log("Data: ", data.results))
+    getHomeArticles().then(data => setArticles(data.results))
   }, [])
 
   return (

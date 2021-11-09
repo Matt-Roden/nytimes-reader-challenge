@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react'
+import { Routes, Route} from "react-router-dom";
 import '../../styles/App.css';
 import { getHomeArticles, getArticlesByTopic } from '../../utils'
 import CardsContainer from '../CardsContainer/CardsContainer';
@@ -20,7 +21,15 @@ function App() {
   return (
     <div className="App">
       <h1>NYTimes Reader</h1>
-      <CardsContainer articles={articles}/>
+      <Routes>
+      <Route 
+        exact path="/"
+        element={
+          <CardsContainer articles={articles}/>
+        }
+      />
+      </Routes>
+      
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../styles/ArticleCard.css'
 
-const ArticleCard = ({ details, key }) => {
+const ArticleCard = ({ details }) => {
   return (
     <article className='articleCard--container'>
       <div className='textWrapper--container'>

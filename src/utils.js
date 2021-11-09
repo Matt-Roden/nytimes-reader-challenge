@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const API_KEY = "GsNXNQlz60M6Dc1Pum7oDqRHwAexkGq2"
 const homePageArticlesURL = "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=GsNXNQlz60M6Dc1Pum7oDqRHwAexkGq2"
 
@@ -12,3 +14,7 @@ export const getArticlesByTopic = (topic) => {
     .then(response => response.json())
     .catch(err => console.log("Error: ", err))
 }
+
+// export const addId = (data) => {
+//   return data.map(story => ({ ...story, id: }))
+// }

@@ -13,6 +13,9 @@ function App() {
     // the value of the selected topic will be passed back up and strung through as arg
   }
 
+  //need to add id to each article in the requested data before setting into articles state
+  // this will be for for rendering a new page with an ID attached to the end of the URL
+
   useEffect(() => {
     getHomeArticles().then(data => setArticles(data.results))
     // getArticlesByTopic('books').then(data => console.log("Book Articles: ", data.results))
@@ -24,10 +27,11 @@ function App() {
       <Routes>
       <Route 
         exact path="/"
-        element={
-          <CardsContainer articles={articles}/>
-        }
+        element={<CardsContainer articles={articles}/>}
       />
+
+
+
       </Routes>
       
     </div>

@@ -8,6 +8,8 @@ import ArticleDetails from '../ArticleDetails/ArticleDetails';
 function App() {
   const [articles, setArticles] = useState([])
 
+  
+
   // const onTopicSearch = (topic) => {
   //   getArticlesByTopic(topic).then(data => setArticles(data.results))
   //   // This will need to get passed down to the topic selector component
@@ -15,6 +17,7 @@ function App() {
   // }
 
   useEffect(() => {
+    // getHomeArticles().then(data => console.log("Data: ", data))
     getHomeArticles().then(data => setArticles(addId(data.results)))
   }, [])
 

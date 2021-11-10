@@ -20,7 +20,7 @@ const ArticleDetails = ({ details, articles }) => {
       {details && (
         <div>
           <Link to='/'>
-          <button>Home</button>
+            <button>Home</button>
           </Link>
           <h1>{articleDetails.title}</h1>
         </div>

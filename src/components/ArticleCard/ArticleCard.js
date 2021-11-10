@@ -11,7 +11,7 @@ const ArticleCard = ({ details }) => {
           <p className='abstract--text'>{details.abstract}</p>
         </div>
         <div className='pictureWrapper--container'>
-          <img src={details.multimedia[3].url}/>
+          <img src={details.multimedia[0].url}/>
           <p>Copyright: {details.multimedia[0].copyright}</p>
         </div>
       </article>

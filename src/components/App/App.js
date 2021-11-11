@@ -1,25 +1,23 @@
 import React, { useEffect, useState} from 'react'
 import { Switch, Route} from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 import '../../styles/App.css';
-import { getHomeArticles, getArticlesByTopic, addId } from '../../utils'
+import { getArticlesByTopic, addId } from '../../utils'
 import CardsContainer from '../CardsContainer/CardsContainer';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
+import TopicSelector from '../TopicSelector/TopicSelector';
 
 function App() {
   const [articles, setArticles] = useState([])
+  const [topic, setTopic] = useState('home')
 
-  
-
-  // const onTopicSearch = (topic) => {
-  //   getArticlesByTopic(topic).then(data => setArticles(data.results))
-  //   // This will need to get passed down to the topic selector component
-  //   // the value of the selected topic will be passed back up and strung through as arg
-  // }
+  const changeTopic = (topic) => {
+    setTopic(topic)
+  }
 
   useEffect(() => {
-    // getHomeArticles().then(data => console.log("Data: ", data))
-    getHomeArticles().then(data => setArticles(addId(data.results)))
-  }, [])
+    getArticlesByTopic(topic).then(data => setArticles(addId(data.results)))
+  }, [topic])
 
   return (
     <div className="App">
@@ -28,7 +26,10 @@ function App() {
         <Route 
           exact path="/"
           render={() => (
-            <CardsContainer articles={articles}/>
+            <>
+              <TopicSelector changeTopic={changeTopic} key={uuidv4()}/>
+              <CardsContainer articles={articles} key={uuidv4()}/>
+            </>
           )}
         />
 
@@ -38,7 +39,7 @@ function App() {
             const story = articles.find(
               article => article.id === match.params.id
             );
-            return <ArticleDetails details={story} articles={articles}/>
+            return <ArticleDetails details={story} articles={articles} key={uuidv4()}/>
           }}
         />
 

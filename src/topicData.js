@@ -1,0 +1,27 @@
+const topicsData = [
+  'arts', 
+  // 'automobiles', 
+  // 'books', 
+  // 'business', 
+  'fashion', 
+  'food',  
+  'home', 
+  'insider', 
+  // 'magazine', 
+  'movies', 
+  'nyregion', 
+  'obituaries', 
+  'opinion', 
+  'politics', 
+  'realestate', 
+  // 'science', 
+  'sports', 
+  'sundayreview', 
+  'technology', 
+  'theater', 
+  't-magazine',  
+  'upshot', 
+  'us', 
+];
+
+export default topicsData;

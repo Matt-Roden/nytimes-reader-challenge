@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import '../../styles/TopicSelector.css'
 import topicsData from '../../topicData'
+import { v4 as uuidv4 } from 'uuid';
 
 function TopicSelector({ changeTopic }) {
   const [topicValue, setTopicValue] = useState('home')
@@ -16,7 +17,7 @@ function TopicSelector({ changeTopic }) {
         {
           topicsData.map(topic => {
             return (
-              <option value={topic}>{topic}</option>
+              <option value={topic} key={uuidv4()}>{topic}</option>
             )
           })
         }

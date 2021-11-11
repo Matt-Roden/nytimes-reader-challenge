@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { Switch, Route} from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 import '../../styles/App.css';
 import { getArticlesByTopic, addId } from '../../utils'
 import CardsContainer from '../CardsContainer/CardsContainer';
@@ -26,8 +27,8 @@ function App() {
           exact path="/"
           render={() => (
             <>
-              <TopicSelector changeTopic={changeTopic}/>
-              <CardsContainer articles={articles}/>
+              <TopicSelector changeTopic={changeTopic} key={uuidv4()}/>
+              <CardsContainer articles={articles} key={uuidv4()}/>
             </>
           )}
         />
@@ -38,7 +39,7 @@ function App() {
             const story = articles.find(
               article => article.id === match.params.id
             );
-            return <ArticleDetails details={story} articles={articles}/>
+            return <ArticleDetails details={story} articles={articles} key={uuidv4()}/>
           }}
         />
 

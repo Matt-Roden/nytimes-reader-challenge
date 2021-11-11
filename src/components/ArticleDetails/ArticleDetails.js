@@ -22,7 +22,13 @@ const ArticleDetails = ({ details, articles }) => {
           <Link to='/'>
             <button>Home</button>
           </Link>
-          <h1>{articleDetails.title}</h1>
+          <div className='titleBox--container'>
+            <h1 className='detailsTitle--text'>{articleDetails.title}</h1>
+            <p className='subHeader--text'>{articleDetails.abstract}</p>
+          </div>
+          
+          <img src={articleDetails.multimedia[0].url}></img>
+
         </div>
       )}
     </>

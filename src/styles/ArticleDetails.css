@@ -1,0 +1,16 @@
+.titleBox--container {
+  border-bottom: solid black 2px;
+  margin: 25px 7%;
+}
+
+.detailsImage--img {
+  max-height: 500px;
+}
+
+@media screen and (max-width: 650px) {
+
+  .detailsImage--img {
+    width: 75%;
+  }
+
+}

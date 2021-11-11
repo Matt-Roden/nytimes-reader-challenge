@@ -1,10 +1,26 @@
 import React from 'react'
 import '../../styles/TopicSelector.css'
+import topicsData from '../../topicData'
 
-function TopicSelector() {
+function TopicSelector({ changeTopic }) {
+
+  const onTopicChange = () => {
+
+  }
+
+
+
   return (
-    <div>
-      Topic Selector!
+    <div className='slectorBox--container'>
+      <select>
+        {
+          topicsData.map(topic => {
+            return (
+              <option>{topic}</option>
+            )
+          })
+        }
+      </select>
     </div>
   )
 }

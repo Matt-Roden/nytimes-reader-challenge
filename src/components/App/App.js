@@ -8,14 +8,15 @@ import TopicSelector from '../TopicSelector/TopicSelector';
 
 function App() {
   const [articles, setArticles] = useState([])
+  const [topic, setTopic] = useState('home')
 
   
 
-  // const onTopicSearch = (topic) => {
-  //   getArticlesByTopic(topic).then(data => setArticles(data.results))
-  //   // This will need to get passed down to the topic selector component
-  //   // the value of the selected topic will be passed back up and strung through as arg
-  // }
+  const changeTopic = (topic) => {
+    getArticlesByTopic(topic).then(data => setArticles(data.results))
+    // This will need to get passed down to the topic selector component
+    // the value of the selected topic will be passed back up and strung through as arg
+  }
 
   useEffect(() => {
     // getHomeArticles().then(data => console.log("Data: ", data))
@@ -30,7 +31,7 @@ function App() {
           exact path="/"
           render={() => (
             <>
-              <TopicSelector />
+              <TopicSelector changeTopic={changeTopic}/>
               <CardsContainer articles={articles}/>
             </>
           )}

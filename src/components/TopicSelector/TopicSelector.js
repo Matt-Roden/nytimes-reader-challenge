@@ -1,22 +1,24 @@
-import React from 'react'
+import React, { useState} from 'react'
 import '../../styles/TopicSelector.css'
 import topicsData from '../../topicData'
 
 function TopicSelector({ changeTopic }) {
+  const [topicValue, setTopicValue] = useState('')
 
-  const onTopicChange = () => {
-
+  const handleChange = (e) => {
+    setTopicValue(e.target.value);
+    changeTopic(topicValue)
   }
 
 
 
   return (
     <div className='slectorBox--container'>
-      <select>
+      <select value={topicValue} onChange={(e) => handleChange(e)}>
         {
           topicsData.map(topic => {
             return (
-              <option>{topic}</option>
+              <option value={topic}>{topic}</option>
             )
           })
         }

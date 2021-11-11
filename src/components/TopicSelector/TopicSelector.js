@@ -3,14 +3,7 @@ import '../../styles/TopicSelector.css'
 import topicsData from '../../topicData'
 
 function TopicSelector({ changeTopic }) {
-  const [topicValue, setTopicValue] = useState('')
-
-  // const handleChange = (e) => {
-    
-  //   setTopicValue(e.target.value);
-  //   // console.log(topicValue)
-  //   changeTopic(topicValue)
-  // }
+  const [topicValue, setTopicValue] = useState('home')
 
   const handleClick = (e) => {
     e.preventDefault()

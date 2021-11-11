@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../../styles/ArticleCard.css'
 
 const ArticleCard = ({ details }) => {
+
   return (
     <Link to={`/${details.id}`} >
       <article className='articleCard--container'>
@@ -16,7 +17,6 @@ const ArticleCard = ({ details }) => {
         </div>
       </article>
     </Link>
-    
   )
 }
 

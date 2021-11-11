@@ -5,16 +5,21 @@ import topicsData from '../../topicData'
 function TopicSelector({ changeTopic }) {
   const [topicValue, setTopicValue] = useState('')
 
-  const handleChange = (e) => {
-    setTopicValue(e.target.value);
+  // const handleChange = (e) => {
+    
+  //   setTopicValue(e.target.value);
+  //   // console.log(topicValue)
+  //   changeTopic(topicValue)
+  // }
+
+  const handleClick = (e) => {
+    e.preventDefault()
     changeTopic(topicValue)
   }
 
-
-
   return (
     <div className='slectorBox--container'>
-      <select value={topicValue} onChange={(e) => handleChange(e)}>
+      <select value={topicValue} onChange={(e) => setTopicValue(e.target.value)}>
         {
           topicsData.map(topic => {
             return (
@@ -23,6 +28,7 @@ function TopicSelector({ changeTopic }) {
           })
         }
       </select>
+      <button onClick={(e) => handleClick(e)}>Select Topic</button>
     </div>
   )
 }

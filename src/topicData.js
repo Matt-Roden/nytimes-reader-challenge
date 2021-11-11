@@ -20,11 +20,9 @@ const topicsData = [
   'sundayreview', 
   'technology', 
   'theater', 
-  't-magazine', 
-  'travel', 
+  't-magazine',  
   'upshot', 
   'us', 
-  'world'
 ];
 
 export default topicsData;

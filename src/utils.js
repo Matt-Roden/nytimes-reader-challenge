@@ -10,6 +10,8 @@ export const getHomeArticles = () => {
 }
 
 export const getArticlesByTopic = (topic) => {
+//console.log("URL: ", `https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=GsNXNQlz60M6Dc1Pum7oDqRHwAexkGq2`)
+
   return fetch(`https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=GsNXNQlz60M6Dc1Pum7oDqRHwAexkGq2`)
     .then(response => response.json())
     .catch(err => console.log("Error: ", err))

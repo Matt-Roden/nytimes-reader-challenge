@@ -13,15 +13,14 @@ function App() {
   
 
   const changeTopic = (topic) => {
-    getArticlesByTopic(topic).then(data => setArticles(data.results))
-    // This will need to get passed down to the topic selector component
-    // the value of the selected topic will be passed back up and strung through as arg
+    setTopic(topic)
   }
 
   useEffect(() => {
+    getArticlesByTopic(topic).then(data => setArticles(addId(data.results)))
     // getHomeArticles().then(data => console.log("Data: ", data))
-    getHomeArticles().then(data => setArticles(addId(data.results)))
-  }, [])
+    // getHomeArticles().then(data => setArticles(addId(data.results)))
+  }, [topic])
 
   return (
     <div className="App">

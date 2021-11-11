@@ -4,6 +4,7 @@ import '../../styles/App.css';
 import { getHomeArticles, getArticlesByTopic, addId } from '../../utils'
 import CardsContainer from '../CardsContainer/CardsContainer';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
+import TopicSelector from '../TopicSelector/TopicSelector';
 
 function App() {
   const [articles, setArticles] = useState([])
@@ -28,7 +29,10 @@ function App() {
         <Route 
           exact path="/"
           render={() => (
-            <CardsContainer articles={articles}/>
+            <>
+              <TopicSelector />
+              <CardsContainer articles={articles}/>
+            </>
           )}
         />
 

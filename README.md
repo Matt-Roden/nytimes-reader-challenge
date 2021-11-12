@@ -19,8 +19,12 @@ Time alloted for this project was capped at 8 hours - from planning stage to fin
 
 ### Media:
 
-<img src="https://res.cloudinary.com/yoroden/image/upload/v1636684671/Screen_Shot_2021-11-11_at_7.37.24_PM_xbkkyl.png" alt="drawing" width="250"/>
-<img src="https://res.cloudinary.com/yoroden/image/upload/v1636684672/Screen_Shot_2021-11-11_at_7.37.36_PM_oup5jn.png" alt="drawing" width="350"/>
+<div>
+  <img src="https://res.cloudinary.com/yoroden/image/upload/v1636684671/Screen_Shot_2021-11-11_at_7.37.24_PM_xbkkyl.png" alt="drawing" width="250"/>
+  <img src="https://res.cloudinary.com/yoroden/image/upload/v1636684672/Screen_Shot_2021-11-11_at_7.37.36_PM_oup5jn.png" alt="drawing" width="350"/>
+</div>
+
+
 
 <!-- ![Phone view of home page](https://res.cloudinary.com/yoroden/image/upload/v1636684671/Screen_Shot_2021-11-11_at_7.37.24_PM_xbkkyl.png)
 ![Ipad view of home page](https://res.cloudinary.com/yoroden/image/upload/v1636684672/Screen_Shot_2021-11-11_at_7.37.36_PM_oup5jn.png) -->

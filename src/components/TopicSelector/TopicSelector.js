@@ -12,8 +12,8 @@ function TopicSelector({ changeTopic }) {
   }
 
   return (
-    <div className='slectorBox--container'>
-      <select value={topicValue} onChange={(e) => setTopicValue(e.target.value)}>
+    <div className='selectorBox--container'>
+      <select className='dropdown--select' value={topicValue} onChange={(e) => setTopicValue(e.target.value)}>
         {
           topicsData.map(topic => {
             return (

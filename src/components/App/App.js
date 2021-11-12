@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NYTimes Reader</h1>
+      <h1 className='headline--text'>NYTimes Reader</h1>
       <Switch>
         <Route 
           exact path="/"
